@@ -1,10 +1,21 @@
 :root {
   font-size: 62%;
+  --bg-color: #edf2ff;
+  --text-color: hsla(230, 100%, 9%, 1);
+  --button-color: hsl(228, 81%, 59%);
+  --hover-color: hsl(230, 57%, 50%);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body.dark {
+  --bg-color: hsl(243, 100%, 7%);
+  --text-color: white;
+  --button-color: hsl(228, 81%, 59%);
+  --hover-color: hsl(230, 57%, 50%);
 }
 
 .wrapper {
@@ -26,7 +37,6 @@
 h1 {
   font-size: 3.2rem;
   font-weight: 500;
-  color: white;
 
   padding-top: 2.4rem;
   padding-bottom: 0.8rem;
@@ -35,7 +45,6 @@ h1 {
 .username {
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
-  color: white;
   opacity: 0.9;
   font-size: 1.4rem;
 
@@ -44,15 +53,16 @@ h1 {
 }
 
 body {
-  background: rgb(2, 0, 36);
+  background: var(--bg-color);
   font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
 }
 
 p {
   font-size: 1.2rem;
   font-weight: 400;
 
-  color: white;
+  color: var(--text-color);
 }
 
 ul {
@@ -76,19 +86,18 @@ ul li a {
 
   margin-bottom: 1.6rem;
 
-  background: hsl(228, 81%, 59%);
+  background: var(--button-color);
   border-radius: 0.6rem;
 
   transition: background 400ms;
 }
 
 ul li a:hover {
-  background: hsl(230, 57%, 50%);
+  background: var(--hover-color);
 }
 
 footer {
   padding-top: 4.8rem;
-  color: white;
   font-weight: 500;
   font-size: 1.2rem;
   opacity: 0.8;
