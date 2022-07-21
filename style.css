@@ -26,8 +26,8 @@ body.dark {
 
 #avatar img {
   width: 100%;
-  max-width: 8rem;
-  border-radius: 4rem;
+  max-width: 10rem;
+  border-radius: 6rem;
 
   padding: 0.2rem;
   border: #4263eb solid 0.4rem;
