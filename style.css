@@ -96,6 +96,10 @@ ul li a:hover {
   background: var(--hover-color);
 }
 
+ul li a i {
+  font-size: 2rem;
+}
+
 footer {
   padding-top: 4.8rem;
   font-weight: 500;
