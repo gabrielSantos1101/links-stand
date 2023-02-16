@@ -32,6 +32,12 @@ body.dark {
   padding: 0.2rem;
   border: #4263eb solid 0.4rem;
   background: white;
+
+  transition: 400ms;
+}
+
+#avatar img:hover {
+  scale: 1.05;
 }
 
 h1 {
@@ -89,11 +95,16 @@ ul li a {
   background: var(--button-color);
   border-radius: 0.6rem;
 
-  transition: background 400ms;
+  transition: 300ms;
 }
 
 ul li a:hover {
   background: var(--hover-color);
+  scale: 1.04;
+}
+
+ul li a:active {
+  background: #6742eb;
 }
 
 ul li a i {
@@ -105,4 +116,8 @@ footer {
   font-weight: 500;
   font-size: 1.2rem;
   opacity: 0.8;
+}
+
+footer span:hover {
+  color: rgb(0, 255, 42);
 }
