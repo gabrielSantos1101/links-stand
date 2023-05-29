@@ -1,14 +1,14 @@
 <h1 align="center">
-  Crystal Ball
+  My Links
 </h1>
 
 <img src="./.github/preview.jpg">
 
 ## 📝 Descrição 
 
-Um site de aleatorização de respostas
+Um site que agrega meus links
 
-- site final: [Link Stand](https://Gabriel-Santos01.github.io/link-stand/)
+- página: [Link Stand](https://gabrielSantos1101.github.io/link-stand/)
 
 ## 🚀 Tecnologias
 
