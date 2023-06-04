@@ -59,8 +59,8 @@ body {
   gap: 0.8rem 0.8rem;
   grid-auto-flow: row;
   grid-template-areas:
-    "Twitter toggle discord"
-    "music music cat"
+    "twitter toggle discord"
+    "music music git"
     "status articles articles"
     "location location email"
     "location location hours";
@@ -73,23 +73,28 @@ body {
   align-items: center;
   justify-content: center;
 
+  position: relative;
+
   background: var(--bg-cards);
 
   border-radius: 20px;
   overflow: hidden;
 }
 
-.twitter {
-  grid-area: Twitter;
-  transition: all 0.2s ease-in-out;
-}
-
-.twitter a {
-  width: 100%;
-  height: 100%;
+.wrap .card a {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.twitter {
+  grid-area: twitter;
+  transition: all 0.2s ease-in-out;
 }
 
 .twitter a svg {
@@ -123,6 +128,23 @@ body {
 
 .discord {
   grid-area: discord;
+  transition: all 0.2s ease-in-out;
+}
+
+.discord a {
+  background-image: url(./assets/images/discord-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 63%;
+}
+
+.discord:hover {
+  scale: 0.97;
+}
+
+.discord a:hover {
+  background-image: url(./assets/images/discord-gif.gif);
+  background-size: 160%;
 }
 
 /* =============== ???? =============== */
@@ -133,8 +155,42 @@ body {
 
 /* =============== ????? =============== */
 
-.cat {
-  grid-area: cat;
+.wrap .git {
+  grid-area: git;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.wrap .git::before {
+  content: "";
+  background-image: url("https://i.gifer.com/NvL.gif");
+  background-size: 300%;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .git:hover {
+  scale: 0.97;
+}
+
+.wrap .git a svg {
+  width: 50%;
+  height: 50%;
+
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrap .git:hover a svg {
+  width: 55%;
+  height: 55%;
+  opacity: 1;
+}
+
+.wrap .git a svg path {
+  fill: #f1f1f1;
 }
 
 /* =============== status =============== */
