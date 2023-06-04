@@ -1,7 +1,10 @@
+@import url(./assets/css/toggle.css);
+
 :root {
   font-size: 62%;
-  --bg-color: #edf2ff;
-  --bg-color: hsl(243, 100%, 7%);
+  --bg-color: hsl(215, 28%, 17%);
+  --bg-cards: hsl(221, 39%, 11%);
+  --text-color: #f1f1f1;
   --text-color: hsla(230, 100%, 9%, 1);
   --button-color: hsl(228, 81%, 59%);
   --hover-color: hsl(230, 57%, 50%);
@@ -65,45 +68,100 @@ body {
   height: 100%;
 }
 
-.wrap div {
-  background: #f1f1f1;
+.wrap .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--bg-cards);
+
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.Twitter {
+.twitter {
   grid-area: Twitter;
+  transition: all 0.2s ease-in-out;
 }
+
+.twitter a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.twitter a svg {
+  width: 40%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.twitter:hover {
+  scale: 0.97;
+}
+
+.twitter:hover a svg {
+  width: 45%;
+}
+
+.twitter a svg path {
+  fill: #f1f1f1;
+}
+
+/* =============== Toggle =============== */
 
 .toggle {
   grid-area: toggle;
 }
 
+.toggle label {
+  scale: 0.5;
+}
+/* =============== Discord =============== */
+
 .discord {
   grid-area: discord;
 }
+
+/* =============== ???? =============== */
 
 .music {
   grid-area: music;
 }
 
+/* =============== ????? =============== */
+
 .cat {
   grid-area: cat;
 }
+
+/* =============== status =============== */
 
 .status {
   grid-area: status;
 }
 
+/* =============== projects =============== */
+
 .articles {
   grid-area: articles;
 }
+
+/* =============== location =============== */
 
 .location {
   grid-area: location;
 }
 
+/* =============== email =============== */
+
 .email {
   grid-area: email;
 }
+
+/* =============== hours =============== */
 
 .hours {
   grid-area: hours;
