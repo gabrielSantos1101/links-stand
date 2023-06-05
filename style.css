@@ -81,6 +81,14 @@ body {
   overflow: hidden;
 }
 
+.card a i {
+  position: absolute;
+  color: #f1f1f1;
+  font-size: 1.7rem;
+  right: 2rem;
+  bottom: 1rem;
+}
+
 .wrap .card a {
   display: flex;
   align-items: center;
@@ -163,9 +171,9 @@ body {
 
 .wrap .git::before {
   content: "";
-  background-image: url("https://i.gifer.com/NvL.gif");
+  background-image: url("https://media.tenor.com/jpkZvhLgqtYAAAAC/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-codes.gif");
   background-size: 300%;
-  opacity: 0.5;
+  opacity: 0.4;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -209,6 +217,34 @@ body {
 
 .location {
   grid-area: location;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.location #time {
+  border: 1px solid lime;
+  height: 50%;
+  width: 50%;
+}
+
+.location #temp {
+  border: 1px solid lime;
+  height: 50%;
+  width: 50%;
+}
+
+.location #condition {
+  border: 1px solid lime;
+  height: 50%;
+  width: 50%;
+  flex: 1;
+}
+
+.location #nada {
+  border: 1px solid lime;
+  height: 50%;
+  width: 50%;
 }
 
 /* =============== email =============== */
