@@ -1,6 +1,6 @@
-import { Age, DaysFromBirthday } from "./assets/js-modules/age.js"
+import { age, DaysFromBirthday } from "./assets/js-modules/age.js"
 
-console.log(Age(), DaysFromBirthday())
+console.log(age, DaysFromBirthday())
 
 const token = "f45befcc"
 const tokenDev = "5517e051"
@@ -26,7 +26,7 @@ fetch(url)
     const condition = data.results.condition_slug
     const city_name = data.results.city_name
 
-    console.log(temp, condition, city_name)
+    // console.log(temp, condition, city_name)
   })
   .catch((error) => console.error(error))
 
