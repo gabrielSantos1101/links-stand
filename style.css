@@ -1,123 +1,257 @@
+@import url(./assets/css/toggle.css);
+
 :root {
   font-size: 62%;
-  --bg-color: #edf2ff;
-  --text-color: hsla(230, 100%, 9%, 1);
+  --bg-color: hsl(215, 28%, 17%);
+  --bg-cards: hsl(221, 39%, 11%);
+  --white-100: #f1f1f1;
   --button-color: hsl(228, 81%, 59%);
   --hover-color: hsl(230, 57%, 50%);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body.dark {
-  --bg-color: hsl(243, 100%, 7%);
-  --text-color: white;
-  --button-color: hsl(228, 81%, 59%);
-  --hover-color: hsl(230, 57%, 50%);
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color);
 }
 
 .wrapper {
-  text-align: center;
-  width: 30rem;
-  margin: 6rem auto;
-}
-
-#avatar img {
-  width: 100%;
-  max-width: 10rem;
-  border-radius: 6rem;
-
-  padding: 0.2rem;
-  border: #4263eb solid 0.4rem;
-  background: white;
-
-  transition: 400ms;
-}
-
-#avatar img:hover {
-  scale: 1.05;
-}
-
-h1 {
-  font-size: 3.2rem;
-  font-weight: 500;
-
-  padding-top: 2.4rem;
-  padding-bottom: 0.8rem;
-}
-
-.username {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 400;
-  opacity: 0.9;
-  font-size: 1.4rem;
-
-  padding-top: 0.8rem;
-  padding-bottom: 4.8rem;
-}
-
-body {
-  background: var(--bg-color);
-  font-family: 'Roboto', sans-serif;
-  color: var(--text-color);
-}
-
-p {
-  font-size: 1.2rem;
-  font-weight: 400;
-
-  color: var(--text-color);
-}
-
-ul {
-  list-style: none;
-}
-
-ul li a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: white;
-
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: 1.6rem 3rem;
-  gap: 1rem;
-  height: 5.3rem;
-
-  margin-bottom: 1.6rem;
-
-  background: var(--button-color);
-  border-radius: 0.6rem;
-
-  transition: 300ms;
+  width: 100%;
+  height: 100%;
+  padding: 8rem 2rem;
 }
 
-ul li a:hover {
-  background: var(--hover-color);
-  scale: 1.04;
+/* .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  width: 79%;
 }
 
-ul li a:active {
-  background: #6742eb;
+.wrap .card {
+  display: flex;
+  width: 11rem;
+  height: 11rem;
+  background: #f1f1f1;
+  border-radius: 24px;
 }
 
-ul li a i {
-  font-size: 2rem;
+.long {
+  flex: 1;
+} */
+
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.8rem 0.8rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "twitter toggle discord"
+    "music music git"
+    "status articles articles"
+    "location location email"
+    "location location hours";
+  width: 100%;
+  height: 100%;
 }
 
-footer {
-  padding-top: 4.8rem;
-  font-weight: 500;
-  font-size: 1.2rem;
-  opacity: 0.8;
+.wrap .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  background: var(--bg-cards);
+
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-footer span:hover {
-  color: rgb(0, 255, 42);
+.card a i {
+  position: absolute;
+  color: var(--white-100);
+  font-size: 1.7rem;
+  right: 2rem;
+  bottom: 1rem;
+}
+
+.wrap .card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: var(--white-100);
+}
+
+.twitter {
+  grid-area: twitter;
+  transition: all 0.2s ease-in-out;
+}
+
+.twitter a svg {
+  width: 40%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.twitter:hover {
+  scale: 0.97;
+}
+
+.twitter:hover a svg {
+  width: 45%;
+}
+
+.twitter a svg path {
+  fill: var(--white-100);
+}
+
+/* =============== Toggle =============== */
+
+.toggle {
+  grid-area: toggle;
+}
+
+.toggle label {
+  scale: 0.5;
+}
+/* =============== Discord =============== */
+
+.discord {
+  grid-area: discord;
+  transition: all 0.2s ease-in-out;
+}
+
+.discord a {
+  background-image: url(./assets/images/discord-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 63%;
+}
+
+.discord:hover {
+  scale: 0.97;
+}
+
+.discord a:hover {
+  background-image: url(./assets/images/discord-gif.gif);
+  background-size: 160%;
+}
+
+/* =============== ???? =============== */
+
+.music {
+  grid-area: music;
+}
+
+/* =============== ????? =============== */
+
+.wrap .git {
+  grid-area: git;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.wrap .git::before {
+  content: "";
+  background-image: url("https://media.tenor.com/jpkZvhLgqtYAAAAC/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-codes.gif");
+  background-size: 300%;
+  opacity: 0.4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .git:hover {
+  scale: 0.97;
+}
+
+.wrap .git a svg {
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrap .git:hover a svg {
+  width: 55%;
+  height: 55%;
+  opacity: 1;
+}
+
+.wrap .git a svg path {
+  fill: var(--white-100);
+}
+
+/* =============== status =============== */
+
+.status {
+  grid-area: status;
+}
+
+/* =============== projects =============== */
+
+.articles {
+  grid-area: articles;
+}
+
+/* =============== location =============== */
+
+.location {
+  grid-area: location;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+/* =============== email =============== */
+
+.email {
+  grid-area: email;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.email:hover {
+  scale: 0.97;
+}
+
+.email svg path {
+  stroke: var(--white-100);
+}
+
+.email svg {
+  width: 8rem;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.email:hover svg {
+  scale: 1.1;
+}
+
+/* =============== hours =============== */
+
+.hours {
+  grid-area: hours;
+}
+
+#tsparticles {
+  position: absolute;
+  z-index: -3;
 }
