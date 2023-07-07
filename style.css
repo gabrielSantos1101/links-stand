@@ -185,7 +185,6 @@ body {
 .wrap .git a svg {
   width: 50%;
   height: 50%;
-
   z-index: 1;
   transition: all 0.3s ease-in-out;
 }
@@ -250,4 +249,9 @@ body {
 
 .hours {
   grid-area: hours;
+}
+
+#tsparticles {
+  position: absolute;
+  z-index: -3;
 }
